@@ -2,7 +2,8 @@
 
 This is a fork of original theme developed by [Kinmury](https://publish.obsidian.md/hub/01+-+Community/People/kinmury#Kinmury+Ditamir), continued by [Technerium](https://github.com/technerium/obsidian-ukiyo)
 
-# This Repository is for personal use mostly and might include the use of AI to understand how Obsidian Themes work and to fix the issues I've encountered with this theme for the past two years.
+## This Repository is for personal use mostly and might include the use of AI to understand how Obsidian Themes work and to fix the issues I've encountered with this theme for the past two years.
+
 
 
 
