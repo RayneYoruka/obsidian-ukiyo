@@ -1,8 +1,13 @@
 # Ukiyo
 
-This is a fork of original theme developed by [Kinmury](https://publish.obsidian.md/hub/01+-+Community/People/kinmury#Kinmury+Ditamir).
+This is a fork of original theme developed by [Kinmury](https://publish.obsidian.md/hub/01+-+Community/People/kinmury#Kinmury+Ditamir), continued by [Technerium]([https://publish.obsidian.md/hub/01+-+Community/People/kinmury#Kinmury+Ditamir](https://github.com/technerium/obsidian-ukiyo))
+
+# This Repository is for personal use mostly and might include the use of AI to understand how Obsidian Themes work and to fix the issues I've encountered with this theme for the past two years.
+
+
 
 Welcome to <b>Ukiyo</b>, an Obsidian theme which main focus is to ease your eyes while using this amazing app, reducing the unnecessary empty spaces from UI elements so that you can have more room for the important stuff: <i>your notes</i>.
+
 
 
 ![](./Showcase.png)
