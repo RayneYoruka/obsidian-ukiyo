@@ -48,7 +48,7 @@ body {
   --callout-tip: var(--color-cyan-rgb);
   --callout-todo: var(--color-blue-rgb);
   --callout-warning: var(--color-orange-rgb);
-  --callout-quote: 158, 158, 158;
+  --callout-quote: rgb(158, 158, 158);
   /* Canvas */
   --canvas-background: var(--background-primary);
   --canvas-card-label-color: var(--text-faint);
@@ -7526,7 +7526,7 @@ kbd {
 .callout {
   overflow: hidden;
   border-style: solid;
-  border-color: rgba(var(--callout-color), var(--callout-border-opacity));
+  background-color: color-mix(in srgb, var(--callout-color) 10%, transparent);
   border-width: var(--callout-border-width);
   border-radius: var(--callout-radius);
   margin: 1em 0;
