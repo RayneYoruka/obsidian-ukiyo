@@ -1,20 +1,16 @@
 /*
- * Ukiyo Remade — Modernization v1
+ * Ukiyo Remade — Modernization v4
  *
- * Purpose:
- * - Preserve Ukiyo's existing appearance and Style Settings features.
- * - Keep the CSS readable and maintainable.
- * - Make conservative performance-oriented improvements.
+ * Image interaction cleanup.
  *
- * v2 changes:
- * - Keeps the original workspace :has() behavior.
- * - Uses inherited font-variant-ligatures on body instead of body *.
- * - Keeps all existing theme features and embedded fonts.
- * - Migrates Ukiyo palette definitions away from Obsidian legacy -rgb variables.
- * - Updates callout color consumption for Obsidian 1.13 color values.
- * - Uses color-mix(in oklch, ...) where a callout tint needs transparency.
+ * Changes:
+ * - Removed the old global img:active fullscreen hack.
+ * - Removed the global img:hover zoom cursor tied to that hack.
+ * - Removed Mermaid's :active fullscreen/background/border behavior.
+ * - Kept normal image rendering and Mermaid layout intact.
  *
- * This is the modernization branch; the original theme remains untouched.
+ * Modern Obsidian owns image interaction; the theme should not fight
+ * the application's current image viewer/editor behavior.
  */ @charset "UTF-8";
 /*!
 /* @settings
@@ -874,7 +870,9 @@ body {
     opacity:0
 }
 .workspace-split.mod-vertical.mod-root .workspace-tab-header-container-inner .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-    transition:background-color opacity var(--hover-animation-duration) ease-in-out
+    transition:
+        background-color var(--hover-animation-duration) ease-in-out,
+        opacity var(--hover-animation-duration) ease-in-out
 }
 .workspace-split.mod-vertical.mod-root .workspace-tab-header-container-inner .workspace-tab-header:not(.is-active) .workspace-tab-header-inner .workspace-tab-header-inner-close-button,:not(.is-mobile,.smooth-mode).minimal-mode.sides-tabs-hover .workspace-split.mod-horizontal.mod-left-split .workspace-tabs.mod-top.mod-top-left-space .workspace-tab-header-container:not(:hover) .workspace-tab-header,:not(.is-mobile,.smooth-mode).minimal-mode.sides-tabs-hover .workspace-split.mod-horizontal.mod-left-split .workspace-tabs.mod-top.mod-top-right-space .workspace-tab-header-container:not(:hover) .workspace-tab-header,:not(.is-mobile,.smooth-mode).minimal-mode.sides-tabs-hover .workspace-split.mod-horizontal.mod-right-split .workspace-tabs.mod-top.mod-top-left-space .workspace-tab-header-container:not(:hover) .workspace-tab-header,:not(.is-mobile,.smooth-mode).minimal-mode.sides-tabs-hover .workspace-split.mod-horizontal.mod-right-split .workspace-tabs.mod-top.mod-top-right-space .workspace-tab-header-container:not(:hover) .workspace-tab-header {
     opacity:0
@@ -1181,38 +1179,11 @@ select.dropdown,select.dropdown:hover {
 img {
     display:block
 }
-.mermaid svg:hover,img:hover {
-    cursor:zoom-in
-}
-.mermaid svg:active,img:active {
-    display:block;
-    -o-object-fit:contain;
-    object-fit:contain;
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    max-height:calc(75% + 1px);
-    max-width:75%;
-    height:calc(75% + 1px);
-    width:75%;
-    text-align:center;
-    cursor:crosshair;
-    -webkit-user-drag:none;
-    -khtml-user-drag:none;
-    -moz-user-drag:none;
-    -o-user-drag:none;
-    z-index:777
-}
 .mermaid {
     text-align:center
 }
 .mermaid svg {
     transition:background-color 0s ease-in-out!important
-}
-.mermaid svg:active {
-    background-color:var(--background-primary);
-    border:2px solid var(--divider-color)
 }
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
     padding-left:1px
@@ -1878,7 +1849,7 @@ div:has(.callout[data-callout-metadata*="$pop"])+div:has(.callout[data-callout-m
     border-right:1px solid var(--indentation-guide-color)
 }
 .dataview .table-view-tbody tr {
-    transition:all var(--hover-faster-animation-duration) ease-in-out
+    transition:background-color var(--hover-faster-animation-duration) ease-in-out
 }
 .dataview .table-view-tbody tr:not(:last-of-type) {
     border-bottom:1px solid var(--indentation-guide-color)
