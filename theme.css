@@ -1,5 +1,5 @@
 /*
- * Ukiyo Remade — Modernization v4
+ * Ukiyo Remade — Modernization v4.1
  *
  * Image interaction cleanup.
  *
@@ -8,8 +8,8 @@
  * - Removed the global img:hover zoom cursor tied to that hack.
  * - Removed Mermaid's :active fullscreen/background/border behavior.
  * - Kept normal image rendering and Mermaid layout intact.
- *
- * Modern Obsidian owns image interaction; the theme should not fight
+ * - Fixed file/link preview size to the same as Obsidian's default size theme
+ * -Modern Obsidian owns image interaction; the theme should not fight
  * the application's current image viewer/editor behavior.
  */ @charset "UTF-8";
 /*!
@@ -1116,8 +1116,8 @@ body {
     animation:scale-up var(--hover-faster-animation-duration) var(--cubic-animation)
 }
 .popover.hover-popover {
-    width:45vw;
-    height:45vh;
+    width:var(--popover-width);
+    height:var(--popover-height);
     border-radius:var(--default-border-radius)
 }
 .popover.hover-popover .markdown-embed.is-loaded {
