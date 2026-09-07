@@ -9,7 +9,7 @@
  * - Removed Mermaid's :active fullscreen/background/border behavior.
  * - Kept normal image rendering and Mermaid layout intact.
  * - Fixed file/link preview size to the same as Obsidian's default size theme
- * -Modern Obsidian owns image interaction; the theme should not fight
+ * - Modern Obsidian owns image interaction; the theme should not fight
  * the application's current image viewer/editor behavior.
  */ @charset "UTF-8";
 /*!
