@@ -1,16 +1,14 @@
 /*
  * Ukiyo Remade — Modernization v4.1
  *
- * Image interaction cleanup.
- *
  * Changes:
  * - Removed the old global img:active fullscreen hack.
  * - Removed the global img:hover zoom cursor tied to that hack.
  * - Removed Mermaid's :active fullscreen/background/border behavior.
  * - Kept normal image rendering and Mermaid layout intact.
  * - Fixed file/link preview size to the same as Obsidian's default size theme
- * - Modern Obsidian owns image interaction; the theme should not fight
- * the application's current image viewer/editor behavior.
+ *   Modern Obsidian owns image interaction; the theme should not fight
+ *   the application's current image viewer/editor behavior.
  */ @charset "UTF-8";
 /*!
 /* @settings
